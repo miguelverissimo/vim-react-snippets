@@ -1,7 +1,8 @@
-# Vim React Snippets
+# Vim React Snippets (Fork of epilande/vim-react-snippets)
 
-A Vim snippet library for React in ES6. You may also want to check out [vim-es2015-snippets](https://github.com/epilande/vim-es2015-snippets).
+All credit goes to Epilande. Original @ [vim-react-snippets](https://github.com/epilande/vim-react-snippets).
 
+--
 Requires [UltiSnips](https://github.com/SirVer/ultisnips).
 
 ![vim-react-snippets](http://i.imgur.com/ImgaW2k.gif)
@@ -15,13 +16,15 @@ Using [vim-plug](https://github.com/junegunn/vim-plug):
 Plug 'epilande/vim-es2015-snippets'
 
 " React code snippets
-Plug 'epilande/vim-react-snippets'
+Plug 'miguelverissimo/vim-react-snippets'
 
 " Ultisnips
 Plug 'SirVer/ultisnips'
 
-" Trigger configuration (Optional)
-" let g:UltiSnipsExpandTrigger="<C-l>"
+""" Utilsnips trigger configuration (Optional)
+let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsJumpForwardTrigger="<M-]>"
+let g:UltiSnipsJumpBackwardTrigger="<M-[>"
 ```
 
 ## Usage
@@ -32,7 +35,7 @@ For example, let's say we have `ListItem.js`
 In Insert mode
 
 ```javascript
-rfc<C-l>
+rfce<C-l>
 ```
 
 Will expand to
@@ -70,9 +73,12 @@ Check out [`UltiSnips/javascript.snippets`](UltiSnips/javascript.snippets) to se
 | -------: | ------- |
 | `rrcc→`  | React Redux Class Component |
 | `rcc→`   | React Class Component |
+| `rcce→`  | React Class Component (extended) |
 | `rfc→`   | React Functional Component |
+| `rnfc→`  | React (next) Functional Component |
+| `rfce→`  | React Functional Component (extended) |
 | `rsc→`   | React Styled Component |
-| `rsci→`   | React Styled Component Interpolation |
+| `rsci→`  | React Styled Component Interpolation |
 
 
 #### Lifecycle
