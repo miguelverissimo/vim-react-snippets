@@ -32,7 +32,7 @@ function mapStateToProps(state) {
 export default connect(mapStateToProps)($1);
 endsnippet
 
-snippet rcc "React Class Component" b
+snippet rcce "React Class Component (extended)" b
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './${2:$1}.css';
@@ -59,7 +59,43 @@ class ${1:`!v expand('%:t:r')`} extends Component {
 export default $1;
 endsnippet
 
+snippet rcc "React Class Component" b
+import React, { Component } from 'react';
+
+class ${1:`!v expand('%:t:r')`} extends Component {
+	render() {
+		return (
+			<${2:div}>
+				$0
+			</$2>
+		);
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet rnfc "React (next) functional Component" b
+const ${1:`!v expand('%:t:r')`} = (${2:props}) => (
+	<${3:div}>
+		$0
+	</$3>
+)
+
+export default $1;
+endsnippet
+
 snippet rfc "React Functional Component" b
+const ${1:`!v expand('%:t:r')`} = (${2:props}) => (
+	<${3:div}>
+		$0
+	</$3>
+)
+
+export default $1;
+endsnippet
+
+snippet rfce "React Functional Component (extended)" b
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './${2:$1}.css';
